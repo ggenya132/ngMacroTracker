@@ -6,7 +6,7 @@ import { Meal } from '../../meal.model';
   styleUrls: ['./meal-item.component.css']
 })
 export class MealItemComponent implements OnInit {
-
+  @Input() id : number; 
   @Input() meal: Meal;
   constructor() { }
   

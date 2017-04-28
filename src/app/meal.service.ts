@@ -9,7 +9,7 @@ export class MealService implements OnInit {
   meals: Meal[] = [];
   constructor() {
   const meal1 = new Meal(10,10,10,"Test 1", "A Test Meal", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRhU-HLQxLyu_fr1XJZcMyUzI0DhIBEIAp9VTThOAtDaKV_PXEvQmOxFT3w");
-  const meal2 = new Meal(20, 20, 20, "Test 2", "A Test Meal Again", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRhU-HLQxLyu_fr1XJZcMyUzI0DhIBEIAp9VTThOAtDaKV_PXEvQmOxFT3w");
+  const meal2 = new Meal(20, 20, 20, "Test 2", "A Test Meal Again", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT45CEqW9SiglO9KPRC82wmbbsvWsBPFGToopvN6dDcoMJxBiGy");
   this.meals.push(meal1, meal2);
   console.log(this.meals);
    }
