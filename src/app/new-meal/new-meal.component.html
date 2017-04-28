@@ -1,8 +1,10 @@
 <div class="row">
   <div class="col-sm-12">
-
+<div class="jumbotron clearfix">
     <h1>Create a new meal</h1>
     <p class="lead">enter meal details</p>
+         <hr class="my-4">
+
     <form (ngSubmit)="onSubmit(form)" #form="ngForm">
     <div class="form-group">
           <label for="name">Enter Meal Name</label>
@@ -21,7 +23,6 @@
           class="form-control">
     </div>
      
-     <hr class="my-4">
     
     <div class="col-md-4">
        <div class="form-group">
@@ -53,9 +54,10 @@
           class="form-control">
     </div>
     </div>
-    
+    <div class="form-actions">
         <button class="btn btn-primary" type="submit"[disabled]="!form.valid">Submit</button>
+        </div>
   </form>
-  
+  </div>
   </div>
 </div>

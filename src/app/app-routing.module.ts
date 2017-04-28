@@ -11,7 +11,7 @@ const routes : Routes = [
     {path: '', component: MealStartComponent },
     {path: 'newmeal', component: NewMealComponent},
     {path: ':id', component: MealDetailComponent },
-    
+    {path: ':id/edit', component: NewMealComponent},
 ]}
 ]
 
