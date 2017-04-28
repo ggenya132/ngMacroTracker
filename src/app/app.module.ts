@@ -11,6 +11,7 @@ import { MealDetailComponent } from './meals/meal-detail/meal-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { MealStartComponent } from './meal-start/meal-start.component';
 import {MealService} from './meal.service';
+import {DropdownDirective} from './dropdown.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import {MealService} from './meal.service';
     MealItemComponent,
     MealDetailComponent,
     HeaderComponent,
-    MealStartComponent
+    MealStartComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,

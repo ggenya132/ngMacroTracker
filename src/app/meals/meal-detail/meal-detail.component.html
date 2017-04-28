@@ -1,9 +1,23 @@
 <div class="jumbotron clear-fix">
-  <h1 class="display-3">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <img class="pull-right img-thumbnail" [src]="meal.image" alt="">
+  <h1 class="display-3">{{meal.name}}</h1>
+  <p class="lead">{{meal.description}}</p>  
+ 
   <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-  </p>
+   
+  <p> Protein : {{meal.protein}}, Carbs: {{meal.carbs}} Fat: {{meal.fat}}</p>
+      <div
+      class="btn-group dropdown"
+      appDropdown>
+      <button
+        type="button"
+        class="btn btn-primary dropdown-toggle">
+        Manage Meal <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a (click)="onLogMeal()" style="cursor: pointer;">Log Meal</a></li>
+        <li><a style="cursor: pointer;" (click)="onEditMeal()">Edit Meal</a></li>
+        <li><a style="cursor: pointer;" (click)="onDeleteMeal()">Delete Meal</a></li>
+      </ul>
+    </div>
 </div>
