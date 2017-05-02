@@ -1,8 +1,9 @@
 <div class="row">
   <hr>
   <div class="col-md-5">
-    <app-meal-list></app-meal-list>
-   
+    <app-meal-list (macrosTriggered)="onMacroSet($event)"></app-meal-list>
+   <app-new-macros
+   *ngIf="setMacros" (closeMacros)="onCloseMacros()"></app-new-macros>
   </div>
     <div class="col-md-7">
       <router-outlet></router-outlet>

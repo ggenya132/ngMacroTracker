@@ -3,6 +3,7 @@ import {MealService} from '../../meal.service';
 import {Meal} from '../../meal.model';
 import { Subscription } from 'rxjs/Subscription';
 import {RouterLink, Router, ActivatedRoute} from '@angular/router';
+import {EventEmitter, Output} from '@angular/core';
 @Component({
   selector: 'app-meal-list',
   templateUrl: './meal-list.component.html',
@@ -10,6 +11,8 @@ import {RouterLink, Router, ActivatedRoute} from '@angular/router';
 })
 export class MealListComponent implements OnInit {
 
+  setMacros: boolean = false;
+   @Output() macrosTriggered: EventEmitter<boolean> = new EventEmitter<boolean>();
   meals: Meal[];
   subscription: Subscription
 
@@ -27,4 +30,9 @@ export class MealListComponent implements OnInit {
     this.router.navigate(['newmeal'], {relativeTo: this.activatedRoute})
   }
 
+onSetMacros(){
+  this.setMacros = true; 
+  this.macrosTriggered.emit(this.setMacros);
+  console.log(this.setMacros);
+}
 }

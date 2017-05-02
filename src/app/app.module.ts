@@ -13,6 +13,8 @@ import { MealStartComponent } from './meal-start/meal-start.component';
 import {MealService} from './meal.service';
 import {DropdownDirective} from './dropdown.directive';
 import { NewMealComponent } from './new-meal/new-meal.component';
+import { NewMacrosComponent } from './new-macros/new-macros.component';
+import {MacroService} from './macro.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,8 @@ import { NewMealComponent } from './new-meal/new-meal.component';
     HeaderComponent,
     MealStartComponent,
     DropdownDirective,
-    NewMealComponent
+    NewMealComponent,
+    NewMacrosComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,10 @@ import { NewMealComponent } from './new-meal/new-meal.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [MealService],
+  providers: [MealService, MacroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+  

@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-sm-12">
     <button class="btn btn-primary" (click)="onNewMeal()">New Meal</button>
+    <button class="btn btn-primary" (click)="onSetMacros()">Set Macros</button>
     <hr>
     <app-meal-item
     *ngFor="let meal of meals; let i = index"

@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class MealsComponent implements OnInit {
 
+  setMacros = false; 
 
   constructor(private mealService: MealService) { }
 
@@ -17,5 +18,13 @@ export class MealsComponent implements OnInit {
  
   }
 
+onMacroSet(event: boolean){
+
+  this.setMacros = event;
+}
+
+onCloseMacros(event: boolean){
+  this.setMacros = event; 
+}
 
 }
